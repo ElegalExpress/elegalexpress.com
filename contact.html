@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>eLegalExpress - Contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="services.html">Services</a> |
+    <a href="templates.html">Templates</a> |
+    <a href="about.html">About Us</a> |
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Contact Us</h1>
+    <form id="contactForm">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" placeholder="Your full name" required /><br /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" placeholder="you@example.com" required /><br /><br />
+
+      <label for="message">Message:</label><br />
+      <textarea id="message" name="message" rows="4" cols="30" placeholder="Write your message here..." required></textarea><br /><br />
+
+      <button type="submit">Send</button>
+    </form>
+  </header>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for contacting eLegalExpress. We will get back to you soon!');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
